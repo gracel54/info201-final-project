@@ -21,19 +21,19 @@ data <- raw_data %>%
 new_data <- data %>% 
   mutate(elec_gap = as.numeric(as.character(`Electricity - production(kWh)`))- as.numeric(as.character(`Electricity - consumption(kWh)`))) %>% 
   arrange(desc(elec_gap)) %>% 
-  mutate(ele_rank = 1:nrow(new_data)) %>% ## ele_rank: rank from highest [electrivity production - consumption] downwards
+  mutate(ele_rank = 1:nrow(data)) %>% ## ele_rank: rank from highest [electrivity production - consumption] downwards
   
   mutate(gdp = as.numeric(as.character(`GDP - per capita`)) * as.numeric(as.character(`GDP - real growth rate(%)`))) %>% 
   arrange(desc(gdp)) %>% 
-  mutate(gdp_rank = 1:nrow(new_data)) %>% ## gdp_rank: rank from highest gdp per cap * growth rate downwards
+  mutate(gdp_rank = 1:nrow(data)) %>% ## gdp_rank: rank from highest gdp per cap * growth rate downwards
 
   mutate(net_ratio = as.numeric(as.character(`Internet hosts`)) / as.numeric(as.character(`Internet users`))) %>% 
   arrange(desc(net_ratio)) %>% 
-  mutate(net_rank = 1:nrow(new_data)) %>% ## net_rank: rank from highest internet host per user downwards
+  mutate(net_rank = 1:nrow(data)) %>% ## net_rank: rank from highest internet host per user downwards
   
   mutate(phone_ratio = as.numeric(as.character(`Telephones - mobile cellular`)) / as.numeric(as.character(`Telephones - main lines in use`))) %>% 
   arrange(phone_ratio) %>% 
-  mutate(phone_rank = 1:nrow(new_data)) ## phone_rank: rank from lowest cellular phone usage compare to mainline upwards
+  mutate(phone_rank = 1:nrow(data)) ## phone_rank: rank from lowest cellular phone usage compare to mainline upwards
   
 
 
@@ -48,3 +48,4 @@ get_10_countries <- function(){
     head(10)
   result_data
 }
+yeet <- get_10_countries()
