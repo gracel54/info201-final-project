@@ -18,7 +18,7 @@ data <- raw_data %>%
   filter(`Telephones - mobile cellular` != "")
 
 ## here we rank the countries based on multiple aspects
-new_data <- data %>% 
+data <- data %>% 
   mutate(elec_gap = as.numeric(as.character(`Electricity - production(kWh)`))- as.numeric(as.character(`Electricity - consumption(kWh)`))) %>% 
   arrange(desc(elec_gap)) %>% 
   mutate(ele_rank = 1:nrow(data)) %>% ## ele_rank: rank from highest [electrivity production - consumption] downwards
@@ -42,7 +42,7 @@ new_data <- data %>%
 ## -- but added elec_gap, elec_rank, gdp, gdp_rank, net_ratio, net_rank, phone_ratio and phone_rank.
 ## they are arranged in the order(from top to bottom) with most possibility of growth to least possibility of growth
 get_10_countries <- function(){
-  result_data <- new_data %>% 
+  result_data <- data %>% 
     mutate(sum_rank = ele_rank + gdp_rank + net_rank + phone_rank) %>% 
     arrange(sum_rank) %>% 
     head(10)
