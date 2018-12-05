@@ -111,7 +111,18 @@ out_list <- function(df) {
   
   # The answer is "United States" and "Russia"
 
-}
+ #(i) Which country has ok gdp level (above average) but less internet users (below average)?
+  output$ok_mc_poor_iusers <- yeet$Country[as.numeric(yeet$`gdp`) > mean(as.numeric(yeet$`gdp`)) 
+                                           & as.numeric(yeet$`Internet users`) < mean(as.numeric(yeet$`Internet users`))]
+  
+  # The Answer is "Norway", "Uruguay" and "Australia"
+
+  
+  
+
+  
+  
+  }
 
 # More analysis:
 # However, from markting standpoint,Russia and Uruguay are two countries has more potenial for a internet company to invest since the market are not quite full.
