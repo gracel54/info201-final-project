@@ -47,7 +47,7 @@ out_list <- function(df) {
   
 # Here is analysis about the coutry has potential to have more investment from internt company in the future among this ten countries.
 # Also, the analysis below would help ansnwer our major questiones below:
-#Which country have relatively ok GDP levels but don’t have much internet usage? (b),
+#Which country have relatively ok GDP levels but don’t have much internet usage? (b),(i),(j)
 #Which country relies on cell phone services but not as much on internets? (a)
 #What are the top regions for communication-service companies to expand to? (c),(d),(e),(f),(g),(h)
     
@@ -111,14 +111,18 @@ out_list <- function(df) {
   
   # The answer is "United States" and "Russia"
 
- #(i) Which country has ok gdp level (above average) but less internet users (below average)?
+#(i) Which country has ok gdp level (above average) but less internet users (below average)?
   output$ok_mc_poor_iusers <- yeet$Country[as.numeric(yeet$`gdp`) > mean(as.numeric(yeet$`gdp`)) 
                                            & as.numeric(yeet$`Internet users`) < mean(as.numeric(yeet$`Internet users`))]
   
   # The Answer is "Norway", "Uruguay" and "Australia"
 
   
+ #(j) Which country has ok gdp rank level (above average) but less internet users (below average)?
+  output$ok_mc_poor_iusers <- yeet$Country[as.numeric(yeet$`gdp_rank`) > mean(as.numeric(yeet$`gdp_rank`)) 
+                                           & as.numeric(yeet$`Internet users`) < mean(as.numeric(yeet$`Internet users`))]
   
+  # The Answer is "Canada", "Russia" and "Switzerland"
 
   
   
