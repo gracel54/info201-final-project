@@ -4,6 +4,7 @@ out_list <- function(df) {
   output <- list()
   
 # Simple analysis of the filtered data, and Waheeda you could pick some useful for the reports.
+# The yeet equal the filtered date of the 10 counries
 #_-------------------------------------------------------------------------------------------------------------------
 #(1) Number of the Country 
   output$num_country <- nrow(df)

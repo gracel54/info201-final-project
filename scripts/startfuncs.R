@@ -48,4 +48,5 @@ get_10_countries <- function(){
     head(10)
   result_data
 }
+#  The yeet equal the filtered date of the 10 counries
 yeet <- get_10_countries()
