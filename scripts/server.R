@@ -8,6 +8,11 @@ countries <- dataset$Country
 
 server <- function(input, output){
   
+    # Home Page Text Output
+  output$ok_mc_poor_iusers <- renderText({
+      paste(home_page[1])
+    })
+    
   #generates a bar chart showing the selected data statistic
   output$stat_select <- renderPlot({
     desired_stat <- input$datastats
