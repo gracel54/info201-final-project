@@ -1,6 +1,8 @@
 library(shiny)
 library(ggplot2)
 
+source("./analysis.R")
+
 
 server <- function(input, output){
 
@@ -11,6 +13,8 @@ server <- function(input, output){
     #ggplot(data, aes(input$datastats)) + geom_bar()
     
   })
+  
+  
   
 
 }
