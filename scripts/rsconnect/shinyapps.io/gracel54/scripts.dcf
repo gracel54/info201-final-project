@@ -1,0 +1,12 @@
+name: scripts
+title: scripts
+username:
+account: gracel54
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 605696
+bundleId: 1744910
+url: https://gracel54.shinyapps.io/scripts/
+when: 1544076710.67318
+asMultiple: FALSE
+asStatic: FALSE
